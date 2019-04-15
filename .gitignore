@@ -2,4 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+fiddle_files
+fiddle.*
 .DS_Store
