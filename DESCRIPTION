@@ -4,6 +4,7 @@ Title: R Markdown Output Formats for Storytelling
 Version: 0.0.0
 Authors@R: c(
   person("Yihui", "Xie", email = "xie@yihui.name", role = c("aut", "cre")),
+  person("Nooreen","Dabbish", email = "ndabbish@gmail.com", role=c("ctb"))
   person()
 )
 Description: R Markdown output formats based JavaScript libraries such as
