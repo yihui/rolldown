@@ -1,20 +1,27 @@
 #' Convert to Scrollama
 #'
-#' @param extra_dependendcies
 #' @param ...
 #'
 #' @return
 #' @export
 #'
 #' @examples
-scroll_document <- function(
-  extra_dependendcies = htmltools::htmlDependency(
-    name = "scrollama",
-    version = "xxx",
-    src = c(filepath = "./scrollama.html"), # ???
-    script = "/scrollama_v123.js"),
-  ...) {
- rmarkdown::html_document(extra_dependencies = extra_dependencies, ...)
+html_scroll = function(...) {
+ rmarkdown::html_document(...,
+                          extra_dependencies = htmltools::htmlDependencies(
+                            list(
+                            htmltools::htmlDependency(
+                              name = "intersection_observer",
+                              version = "0.5.1",
+                              src = "resources",
+                              script = "intersection-observer.js"),
+                            htmltools::htmlDependency(
+                             name = "scrollama",
+                             version = "2.0.0",
+                             src = "resources",
+                             script = "scrollama.js")
+                            ))
+                          )
 }
 
 # add Scrollama css class & attrs to rmd sections
