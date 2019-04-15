@@ -1,7 +1,8 @@
 ---
 title: "Untitled"
-output: html_document:
-  self_contained: FALSE
+output: 
+  rolldown::html_scroll:
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
