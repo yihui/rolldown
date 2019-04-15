@@ -1,0 +1,10 @@
+language: R
+sudo: false
+cache: packages
+
+before_install:
+  - "curl https://xran.yihui.name/.gitconfig -o ~/.gitconfig"
+
+after_success:
+  - "(curl https://xran.yihui.name/r-xran | bash)"
+  - cd inst/examples; ./deploy_github
