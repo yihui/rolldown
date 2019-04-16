@@ -1,7 +1,7 @@
 Package: rolldown
 Type: Package
 Title: R Markdown Output Formats for Storytelling
-Version: 0.0.0
+Version: 0.0.1
 Authors@R: c(
   person("Yihui", "Xie", email = "xie@yihui.name", role = c("aut", "cre")),
   person("Siqi", "Zhang", email = "iqis.gnahz@gmail.com", role = c("ctb")),
@@ -11,6 +11,8 @@ Authors@R: c(
   )
 Description: R Markdown output formats based JavaScript libraries such as
     Scrollama for storytelling.
+Imports: htmltools, bookdown, jsonlite
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1
