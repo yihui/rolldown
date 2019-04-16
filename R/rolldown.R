@@ -29,7 +29,6 @@ add_step <- function(x, sidebar, main) {
     sidebar = htmltools::tags$div(id = id, class = "step", sidebar),
     main = htmltools::tags$div(
       id = paste0("main-", id),
-      #class = "is-not-active",
       style = "opacity: 0",
       main
     )
@@ -64,7 +63,7 @@ figure_div <- function(...) {
 as_html <- function(x) {
   if (!file.exists(x)) stop("File does not exist")
   tmpfile <- tempfile(fileext = ".html")
-  rmarkdown::render(x, output_file = tmpfile, output_format = rmarkdown::html_document_base())
+  rmarkdown::render(x, output_file = tmpfile, output_format = rmarkdown::html_document())
   htmltools::HTML(paste(readLines(tmpfile), collapse = "\n"))
 }
 

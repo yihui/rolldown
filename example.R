@@ -1,4 +1,5 @@
 library(plotly)
+library(leaflet)
 library(rolldown)
 
 p1 <- ggplot(diamonds, aes(x = log(price), color = clarity)) +
