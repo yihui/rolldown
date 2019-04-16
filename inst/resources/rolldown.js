@@ -10,15 +10,15 @@ var scroller = scrollama();
 // generic window resize listener event
 function handleResize() {
 	 // 1. update height of step elements
-	 var stepH = Math.floor(window.innerHeight * 0.75);
-	 step.style('height', stepH + 'px');
+	 var stepH = Math.floor(window.innerHeight);
+	 step.style('min-height', stepH + 'px');
 
 	 var figureHeight = window.innerHeight / 1.1;
 	 var figureMarginTop = (window.innerHeight - figureHeight) / 2;
 
 	 figure
+	    .selectAll("div")
 	  	.style('height', figureHeight + 'px')
-	  	.style('width', '100%')
 			.style('top', figureMarginTop + 'px');
 
 	  // 3. tell scrollama to update new element dimensions
@@ -28,16 +28,18 @@ function handleResize() {
 // scrollama event handlers
 function handleStepEnter(response) {
 	console.log("enter", response);
-	var id = "main-" + response.element.id;
-  var main = document.getElementById(id);
-  main.classList.remove('is-not-active');
+	var id = "#main-" + response.element.id;
+  d3.select(id)
+    .transition(400)
+    .style("opacity", 1)
 }
 
 function handleStepExit(response) {
   console.log("exit", response);
-  var id = "main-" + response.element.id;
-  var main = document.getElementById(id);
-  main.classList.add('is-not-active');
+  var id = "#main-" + response.element.id;
+  d3.select(id)
+    .transition(400)
+    .style("opacity", 0)
 }
 
 function init() {

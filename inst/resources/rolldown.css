@@ -48,20 +48,13 @@ a {
 }
 
 #scrolly div.figure {
-	position: -webkit-sticky;
-	position: sticky;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	margin: 0;
 }
 
 #scrolly div.figure div {
-  width: 100%;
-}
-
-#scrolly div.figure div.is-not-active {
-  display: none;
+  position: -webkit-sticky;
+	position: sticky;
+  min-width: 100%;
 }
 
 #scrolly .step {

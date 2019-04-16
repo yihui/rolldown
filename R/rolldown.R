@@ -27,7 +27,12 @@ add_step <- function(x, sidebar, main) {
   id <- basename(tempfile())
   x[[length(x) + 1]] <- list(
     sidebar = htmltools::tags$div(id = id, class = "step", sidebar),
-    main = htmltools::tags$div(id = paste0("main-", id), class = "is-not-active", main)
+    main = htmltools::tags$div(
+      id = paste0("main-", id),
+      #class = "is-not-active",
+      style = "opacity: 0",
+      main
+    )
   )
 
   x
