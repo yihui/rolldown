@@ -21,7 +21,7 @@ gg2 <- ggplotly(p, width = 1200, height = 600) %>%
   config(displayModeBar = FALSE)
 
 map <- leaflet(height = 600) %>%
-  addTiles() %>%
+  addTiles(attribution = '') %>%
   addMarkers(-93.7418395, 41.6745487, popup = "Thanks John Deere!") %>%
   setView(-93.74, 41.675, 15)
 

@@ -23,13 +23,14 @@ function handleStepEnter(response) {
   var id = "main-" + response.element.id;
   var height = document.getElementById(id).clientHeight;
   var top = (window.innerHeight - height) / 2;
+  var top = Math.max(0, top);
 
   var el = d3.select("#" + id);
   el.style("top", top + "px");
 
   el
     .transition(400)
-    .style("opacity", 1)
+    .style("opacity", 1);
 }
 
 function handleStepExit(response) {
@@ -39,7 +40,7 @@ function handleStepExit(response) {
 
   el
     .transition(400)
-    .style("opacity", 0)
+    .style("opacity", 0);
 }
 
 function init() {
