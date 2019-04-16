@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-fiddle_files
-fiddle.html
 .DS_Store
+fiddle
+.gitignore
