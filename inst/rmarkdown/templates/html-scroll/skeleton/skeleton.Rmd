@@ -16,13 +16,13 @@ output:
 }
 ```
 
-### ijlyttle
+# ijlyttle
 ![](https://avatars0.githubusercontent.com/u/2800934?s=88&v=4)
 <p>I think this will be a great way to make sure we feel good about our GitHub accounts.</p>
 <p>Please respond to this issue by introducing yourself, or if you like you can respond with an emoji.</p>
 
 
-### AmeliaMN
+# AmeliaMN
 ![](https://avatars0.githubusercontent.com/u/2576787?s=88&v=4)
 <p>Hello! I'm Amelia McNamara, I live in Minneapolis and teach at the University of St Thomas.</p>
 <p>Not sure if Ian is going to cover this later, but I think it's fun to have a picture (either of yourself, or something else you like) as your Github profile picture, rather than the default picture Github picks for you. If you want to do that, go up to the top right corner of this screen and click the drop-down arrow next to your current picture and select "Your Profile." Once you're there, just click on the square of your current picture and upload a new one!</p>
@@ -30,7 +30,7 @@ output:
 <p>I'm excited for the unconf!<br><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/2576787/54565587-b1e7e000-499c-11e9-9fca-1cfd19811b13.gif"><img src="https://user-images.githubusercontent.com/2576787/54565587-b1e7e000-499c-11e9-9fca-1cfd19811b13.gif" alt="excited2" style="max-width:100%;"></a></p>
 
 
-### ijlyttle
+# ijlyttle
 ![](https://avatars0.githubusercontent.com/u/2800934?s=88&v=4)
 <p>Thanks Amelia!</p>
 <p>I'm so glad to be working with <a class="user-mention" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=2576787" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/AmeliaMN">@AmeliaMN</a>, <a class="user-mention" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=9620552" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/haleyjeppson">@haleyjeppson</a>, and <a class="user-mention" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=6137322" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/sctyner">@sctyner</a> on this day-zero, not least because I am forgetting to go over a lot of stuff, but together, we'll be covered!</p>
@@ -40,20 +40,13 @@ output:
 <p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/2800934/54568132-15c1d700-49a4-11e9-9836-a77cc0266471.gif"><img src="https://user-images.githubusercontent.com/2800934/54568132-15c1d700-49a4-11e9-9836-a77cc0266471.gif" alt="giphy" style="max-width:100%;"></a></p>
 
 
-### mkosmicki
+# mkosmicki
 ![](https://avatars1.githubusercontent.com/u/35268474?s=88&v=4)
 <p>I've got my RStudio updated and popped in here to say "Hello World".  (The first thing you ever do when programming....right?  LOL) I'm really excited to meet all of you in a few weeks at the unconf. I'm hoping to learn a lot from those who have been using R for a lot longer than I have.</p>
 <p>I have a BA in Clinical Psych and a MA in Ed Psych (Quantitative &amp; Qualitative Methods) from the University of Nebraska - Lincoln (Go Huskers!). I spent 16 years in state government (14 working for Nebraska's PBS &amp; NPR station) before moving to Iowa.</p>
 <p>I currently work for an advertising agency in West Des Moines as a Sr. Marketing Analyst. I managed to go a very long time using SPSS (like 25 years!) for most of my analysis needs. Now the time has come to get busy with R.</p>
 <p><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/35268474/54635133-896ded80-4a51-11e9-9a0a-7c4def1bbeef.jpg"><img src="https://user-images.githubusercontent.com/35268474/54635133-896ded80-4a51-11e9-9a0a-7c4def1bbeef.jpg" alt="Bitstrip_Rosie" style="max-width:100%;"></a></p>
 <p>Also....I was wondering if anyone had played with RStudio Cloud? I was installing RStudio on my home laptop last night and saw RStudio Cloud Alpha.</p>
-
-
-### DrFletch
-![](https://avatars1.githubusercontent.com/u/47152428?s=88&v=4)
-<p>I am looking forward to meeting you all in a few weeks at the unconference and learning from R super-users. I also utilize SPSS, Excel, Access, and SQL server management studio. I frequently find myself using a combination of tools to complete a task depending on the project.</p>
-<p>I earned a B.A. in Political Science from Winona State University; from Iowa State University an M.P.A. (Public Administration) and Ph.D. (Education Leadership). GO CYCLONES!</p>
-<p>I currently work in the Division of Community Colleges and Workforce Preparation at the Iowa Department of Education. Five years prior, I worked at Iowa State University as an undergraduate programs coordinator.</p>
 
 ```{r echo = FALSE}
 rolldown::scrollama_setup(options = list(step = ".section.level1", offset = 0.35))
