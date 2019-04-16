@@ -4,6 +4,18 @@ output:
   rolldown::html_scroll
 ---
 
+  ```{css, echo=FALSE}
+.level1 {
+  min-height: 400px;
+  border: 1px solid;
+  margin-bottom: 4em;
+  padding: 1em 2em 2em;
+}
+.is-active {
+  background-color: yellow;
+}
+```
+
 ### ijlyttle
 ![](https://avatars0.githubusercontent.com/u/2800934?s=88&v=4)
 <p>I think this will be a great way to make sure we feel good about our GitHub accounts.</p>
@@ -43,3 +55,6 @@ output:
 <p>I earned a B.A. in Political Science from Winona State University; from Iowa State University an M.P.A. (Public Administration) and Ph.D. (Education Leadership). GO CYCLONES!</p>
 <p>I currently work in the Division of Community Colleges and Workforce Preparation at the Iowa Department of Education. Five years prior, I worked at Iowa State University as an undergraduate programs coordinator.</p>
 
+```{r echo = FALSE}
+rolldown::scrollama_setup(options = list(step = ".section.level1", offset = 0.35))
+```
