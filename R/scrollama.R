@@ -41,8 +41,7 @@ html_scroll = function(...) {
 #' @examples
 scrollama_init_setup <- function(params = list(step = ".level1",
                                                debug = "true",
-                                               offset = "0.5")
-  ){
+                                               offset = "0.5")){
   init_script <- paste0(
     "var scroller = scrollama();
     function handleStepEnter(response) {
@@ -67,3 +66,4 @@ scrollama_init_setup <- function(params = list(step = ".level1",
 
   htmltools::tags$script(init_script)
 }
+
