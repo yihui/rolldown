@@ -47,10 +47,6 @@ a {
 	max-width: 20rem;
 }
 
-#scrolly div.figure {
-	margin: 0;
-}
-
 #scrolly div.figure div {
   position: -webkit-sticky;
 	position: sticky;

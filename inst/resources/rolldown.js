@@ -13,14 +13,6 @@ function handleResize() {
 	 var stepH = Math.floor(window.innerHeight);
 	 step.style('min-height', stepH + 'px');
 
-	 var figureHeight = window.innerHeight / 1.1;
-	 var figureMarginTop = (window.innerHeight - figureHeight) / 2;
-
-	 figure
-	    .selectAll("div")
-	  	.style('height', figureHeight + 'px')
-			.style('top', figureMarginTop + 'px');
-
 	  // 3. tell scrollama to update new element dimensions
 	  scroller.resize();
 }
@@ -28,16 +20,24 @@ function handleResize() {
 // scrollama event handlers
 function handleStepEnter(response) {
 	console.log("enter", response);
-	var id = "#main-" + response.element.id;
-  d3.select(id)
+  var id = "main-" + response.element.id;
+  var height = document.getElementById(id).clientHeight;
+  var top = (window.innerHeight - height) / 2;
+
+  var el = d3.select("#" + id);
+  el.style("top", top + "px");
+
+  el
     .transition(400)
     .style("opacity", 1)
 }
 
 function handleStepExit(response) {
   console.log("exit", response);
-  var id = "#main-" + response.element.id;
-  d3.select(id)
+  var id = "main-" + response.element.id;
+  var el = d3.select("#" + id);
+
+  el
     .transition(400)
     .style("opacity", 0)
 }
@@ -51,8 +51,7 @@ function init() {
 	// 3. bind scrollama event handlers (this can be chained like below)
 	scroller.setup({
 		step: '#scrolly article .step',
-		offset: 0.33,
-		debug: true,
+		offset: 0.33
 	})
 	  .onStepEnter(handleStepEnter)
 		.onStepExit(handleStepExit);
