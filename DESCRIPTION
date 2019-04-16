@@ -9,6 +9,9 @@ Authors@R: c(
   )
 Description: R Markdown output formats based JavaScript libraries such as
     Scrollama for storytelling.
+Imports:
+  htmltools,
+  rmarkdown
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

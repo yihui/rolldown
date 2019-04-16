@@ -26,8 +26,8 @@ add_step <- function(x, sidebar, main) {
 
   id <- basename(tempfile())
   x[[length(x) + 1]] <- list(
-    sidebar = tags$div(id = id, class = "step", sidebar),
-    main = tags$div(id = paste0("main-", id), class = "is-not-active", main)
+    sidebar = htmltools::tags$div(id = id, class = "step", sidebar),
+    main = htmltools::tags$div(id = paste0("main-", id), class = "is-not-active", main)
   )
 
   x
@@ -35,25 +35,25 @@ add_step <- function(x, sidebar, main) {
 
 #' @export
 print.rolldown <- function(x, ...) {
-  content <- tags$main(tags$section(
+  content <- htmltools::tags$main(htmltools::tags$section(
     id = "scrolly",
-    do.call(tags$article, lapply(x, function(x) x$sidebar)),
+    do.call(htmltools::tags$article, lapply(x, function(x) x$sidebar)),
     do.call(figure_div, lapply(x, function(x) x$main))
   ))
 
-  content <- tagList(
+  content <- htmltools::tagList(
     content,
     rolldown_deps(),
-    tags$script(paste(readLines("inst/resources/rolldown.js"), collapse = "\n"))
+    htmltools::tags$script(paste(readLines("inst/resources/rolldown.js"), collapse = "\n"))
   )
 
-  print(browsable(content))
+  print(htmltools::browsable(content))
 
   invisible(content)
 }
 
 figure_div <- function(...) {
-  tags$div(..., class = "figure")
+  htmltools::tags$div(..., class = "figure")
 }
 
 as_html <- function(x) {

@@ -26,15 +26,6 @@ a {
   font-weight: 400;
 }
 
-#intro {
-  margin-bottom: 320px;
-}
-
-#outro {
-  height: 640px;
-}
-
-
 #scrolly {
 	position: relative;
 	display: -webkit-box;
@@ -59,7 +50,6 @@ a {
 #scrolly div.figure {
 	position: -webkit-sticky;
 	position: sticky;
-	background-color: #8a8a8a;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -74,28 +64,8 @@ a {
   display: none;
 }
 
-/*
-figure div {
-	text-align: center;
-	padding: 1rem;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	font-size: 8rem;
-	font-weight: 900;
-	color: #fff;
-}
-*/
-
-
-
 #scrolly .step {
 	margin: 0 auto 2rem auto;
-	background-color: #3b3b3b;
-	color: #fff;
 }
 
 #scrolly .step:last-child {

@@ -1,6 +1,11 @@
-Here is the famous `diamonds` dataset. It comes from the **ggplot2** package.
+Ah, the famous `diamonds` dataset from **ggplot2**. With the **plotly** package, we can make this graph of interactive
 
-```{r}
-data(diamonds, package = "ggplot2")
-str(diamonds)
+```r
+library(plotly)
+library(rolldown)
+
+p1 <- ggplot(diamonds, aes(x = log(price), color = clarity)) +
+  geom_freqpoly(stat = "density") +
+  facet_wrap(~cut)
+ggplotly(p1)
 ```
