@@ -44,7 +44,7 @@ a {
 #scrolly article {
 	position: relative;
 	padding: 0 1rem;
-	max-width: 20rem;
+	max-width: 30rem;
 }
 
 #scrolly div.figure div {
@@ -62,7 +62,6 @@ a {
 }
 
 #scrolly .step div {
-	text-align: center;
 	padding: 1rem;
 	font-size: 1.5rem;
 }

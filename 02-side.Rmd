@@ -1,1 +1,8 @@
-Here is another view
+Residual plots for the model:
+
+$$
+log(price) = \beta_0 + \beta_1 * log(carat)
+$$
+
+
+We clearly need to account for the diamond clarity!
