@@ -1,7 +1,6 @@
-#' An R Markdown output format for using Scrollama
+#' R Markdown output formats for using Scrollama
 #'
-#' This output format will include the Scrollama JS library in the HTML output
-#' from R Markdown.
+#' Include the Scrollama JS library in the HTML output from R Markdown.
 #' @param ... Arguments to be passed to
 #'   \code{bookdown::\link{html_document2}()}.
 #' @importFrom htmltools htmlDependency tags HTML
@@ -11,6 +10,12 @@ scrollama <- function(...) {
     htmlDependency(
       'scrollama', '2.0.0', pkg_resource('scrollama'), script = 'scrollama.min.js')
   ))
+}
+
+#' @rdname scrollama
+#' @export
+scrollama_sidebar <- function(..., template = pkg_resource('html', 'scrollama-side.html')) {
+  scrollama(..., template = template)
 }
 
 #' @param options A list of initialization options for Scrollama.
