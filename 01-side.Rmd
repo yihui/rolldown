@@ -1,0 +1,6 @@
+Here is the famous `diamonds` dataset. It comes from the **ggplot2** package.
+
+```{r}
+data(diamonds, package = "ggplot2")
+str(diamonds)
+```
