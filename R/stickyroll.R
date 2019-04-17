@@ -11,15 +11,17 @@
 #'   add_step("Look here", p1) %>%
 #'   add_step("Another one", p2)
 
-rolldown <- function() {
-  structure(list(), class = "rolldown")
+stickyroll <- function() {
+  structure(list(), class = "stickyroll")
 }
 
+#' Add a 'step' to the
 #' @param
 #' @export
 
 add_step <- function(x, sidebar, main) {
   sidebar <- as_html(sidebar)
+  main <- htmltools::as.tags(main)
   if (!inherits(main, c("htmlwidget", "shiny.tag", "shiny.tag.list"))) {
     warning("main content must be an htmlwidget or html content")
   }
@@ -38,7 +40,7 @@ add_step <- function(x, sidebar, main) {
 }
 
 #' @export
-print.rolldown <- function(x, ...) {
+print.stickyroll <- function(x, ...) {
   content <- htmltools::tags$main(htmltools::tags$section(
     id = "scrolly",
     do.call(htmltools::tags$article, lapply(x, function(x) x$sidebar)),
@@ -71,25 +73,11 @@ as_html <- function(x) {
 rolldown_deps <- function() {
     list(
       htmltools::htmlDependency(
-        name = "jquery",
-        version = "0.5.1",
-        src = "resources",
-        package = "rolldown",
-        script = "jquery.min.js"
-      ),
-      htmltools::htmlDependency(
         name = "d3",
         version = "5.9.1",
         src = "resources",
         package = "rolldown",
         script = "d3.min.js"
-      ),
-      htmltools::htmlDependency(
-        name = "intersection_observer",
-        version = "0.5.1",
-        src = "resources",
-        package = "rolldown",
-        script = "intersection-observer.js"
       ),
       htmltools::htmlDependency(
         name = "scrollama",

@@ -1,1 +1,2 @@
 #' @import htmltools
+#' @import rmarkdown
