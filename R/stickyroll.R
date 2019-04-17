@@ -50,7 +50,9 @@ print.stickyroll <- function(x, ...) {
   content <- htmltools::tagList(
     content,
     rolldown_deps(),
-    htmltools::tags$script(paste(readLines("inst/resources/rolldown.js"), collapse = "\n"))
+    htmltools::tags$script(
+      paste(readLines(file.path(pkg_resource("stickyroll"), "stickyroll.js")), collapse = "\n")
+    )
   )
 
   print(htmltools::browsable(content))
@@ -75,23 +77,21 @@ rolldown_deps <- function() {
       htmltools::htmlDependency(
         name = "d3",
         version = "5.9.1",
-        src = "resources",
-        package = "rolldown",
+        pkg_resource('d3'),
         script = "d3.min.js"
       ),
       htmltools::htmlDependency(
-        name = "scrollama",
-        version = "2.0.0",
-        src = "resources",
-        package = "rolldown",
-        script = "scrollama.js"
+        'scrollama',
+        '2.0.0',
+        pkg_resource('scrollama'),
+        script = 'scrollama.min.js'
       ),
       htmltools::htmlDependency(
-        name = "rolldown-css",
-        version = "0.0.0",
-        src = "resources",
-        package = "rolldown",
-        stylesheet = "rolldown.css"
+        name = "stickyroll",
+        version = "0.0.1",
+        pkg_resource('stickyroll'),
+        stylesheet = "stickyroll.css",
+        all_files = FALSE
       )
     )
 }

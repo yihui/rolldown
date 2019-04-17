@@ -25,7 +25,7 @@ map <- leaflet(height = 600) %>%
   addMarkers(-93.7418395, 41.6745487, popup = "Thanks John Deere!") %>%
   setView(-93.74, 41.675, 15)
 
-rolldown() %>%
+stickyroll() %>%
   add_step("01-side.Rmd", gg1) %>%
   add_step("02-side.Rmd", gg2) %>%
   add_step("03-side.Rmd", map)
