@@ -2,10 +2,13 @@
 % Please edit documentation in R/scrollama.R
 \name{scrollama}
 \alias{scrollama}
+\alias{scrollama_sidebar}
 \alias{scrollama_setup}
-\title{An R Markdown output format for using Scrollama}
+\title{R Markdown output formats for using Scrollama}
 \usage{
 scrollama(...)
+
+scrollama_sidebar(..., template = pkg_resource("html", "scrollama-side.html"))
 
 scrollama_setup(options = list(step = ".section, img, video, embed", offset = 0.5))
 }
@@ -16,8 +19,7 @@ scrollama_setup(options = list(step = ".section, img, video, embed", offset = 0.
 \item{options}{A list of initialization options for Scrollama.}
 }
 \description{
-This output format will include the Scrollama JS library in the HTML output
-from R Markdown.
+Include the Scrollama JS library in the HTML output from R Markdown.
 }
 \examples{
 rolldown::scrollama_setup(list(step = ".level1", offset = 0.2))

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    $for(author-meta)$<meta name="author" content="$author-meta$" />$endfor$
+    $if(date-meta)$<meta name="date" content="$date-meta$" />$endif$
+    <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        max-width: 100%;
+      }
+      .main {
+        display: flex;
+      }
+      .main table {
+        display: block;
+        max-height: 200px;
+        overflow: hidden;
+      }
+      .sidebar {
+        max-width: 30rem;
+      }
+      .exhibit {
+        width: 100%;
+        position: sticky;
+        border: 1px solid;
+        top: 10vh;
+        height: 80vh;
+        margin-left: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .exhibit * {
+        max-height: 100%;
+      }
+    </style>
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+
+    $for(css)$
+    <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+    $endfor$
+
+  </head>
+  <body>
+$for(include-before)$
+$include-before$
+$endfor$
+
+<div class="header">
+$if(title)$
+<h1 class="title toc-ignore">$title$</h1>
+$if(subtitle)$
+<h2 class="subtitle">$subtitle$</h2>
+$endif$
+$for(author)$
+$if(author.name)$
+<h3 class="author">$author.name$</h3>
+$if(author.affiliation)$
+<address class="affiliation">
+$author.affiliation$
+$endif$
+$if(author.email)$
+<a class="email" href="mailto:">$author.email$</a>
+</address>
+$endif$
+$else$
+<h3 class="author">$author$</h3>
+$endif$
+$endfor$
+$if(date)$
+<h3 class="date">$date$</h3>
+$endif$
+$if(abstract)$
+<div class="abstract">
+<p class="abstract">Abstract</p>
+$abstract$
+</div>
+$endif$
+$endif$
+</div>
+
+<div class="main">
+<div class="sidebar">$body$</div>
+<div class="exhibit"></div>
+</div>
+
+<script>
+(function() {
+  var scroller = scrollama(),
+      selector = "div.figure, img, table, video, embed, iframe, .html-widget",
+      container = document.querySelector(".exhibit");
+
+  scroller.setup({"step": ".section, " + selector})
+    .onStepEnter(res => {
+      var el = res.element;
+      el.classList.add("is-active");
+      var ex = el;
+      if (el.classList.contains("section")) {
+        ex = el.querySelector(selector);
+        if (!ex) {
+          container.innerHTML = "";
+          return;
+        }
+      }
+      if (ex.nodeName === "img" && ex.parentNode.classList.contains("figure")) {
+        ex = ex.parentNode;
+      }
+      container.innerHTML = "";
+      container.append(ex.cloneNode(true));
+      var els = container.querySelectorAll("*[width]");
+      for (var i = 0; i < els.length; i++) {
+        els[i].removeAttribute('width');
+      }
+    })
+    .onStepExit(res => {
+      res.element.classList.remove("is-active");
+    });
+
+  window.addEventListener("resize", scroller.resize);
+})();
+</script>
+
+$if(math)$
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "$if(mathjax)$$mathjax$$endif$";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+$endif$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+  </body>
+</html>

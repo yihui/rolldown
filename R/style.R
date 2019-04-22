@@ -14,4 +14,3 @@ rolldown_style_default <- function (...) {
   }"
   tags$style(HTML(style))
 }
-

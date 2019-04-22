@@ -2,6 +2,7 @@
 
 export(scrollama)
 export(scrollama_setup)
+export(scrollama_sidebar)
 importFrom(htmltools,HTML)
 importFrom(htmltools,htmlDependency)
 importFrom(htmltools,tags)
