@@ -25,26 +25,32 @@ title: "Scrollama Document"
 output:
   rolldown::scrollama_sidebar
 ---
+
 ```{r echo = FALSE}
 # include this code block in the beginning to specify a style
 rolldown::rolldown_style_default()
 ```
 
 # Level-One
+
 Use level-one heading to designate scrolling sections. 
 
 ## Level-Two
+
 Level-two and below headings...
 
 ### Level-Three
+
 ...are all contained in the same section.
 
 
 # Text
+
 Texts are displayed in the sidebar area.
 
 
 # Plot
+
 Plots are displayed in the exhibit area.  
 You may include more than one plots in any section.
 
@@ -55,6 +61,7 @@ plot(pressure)
 
 
 # Image
+
 Images are treated the same with plots. Use Markdown syntax to insert them in texts.   
 
 Local news [reported](https://www.desmoinesregister.com/story/news/2018/04/27/rubber-duck-des-moines-yess-duck-derby/558852002/) a giant inflatable rubber duck rolling down the street of Des Moines, where this package is conceived.  
@@ -62,6 +69,7 @@ Local news [reported](https://www.desmoinesregister.com/story/news/2018/04/27/ru
 
 
 # HTML Widgets
+
 Support for HTML Widgets are under development. 
 
 ````
