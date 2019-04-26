@@ -23,8 +23,7 @@ It is easy to adopt Scrollama for a document. A minimal example goes as follows:
 ---
 title: "Scrollama Document"
 output:
-  rolldown::scrollama_sidebar:
-  self_contained: no
+  rolldown::scrollama_sidebar
 ---
 ```{r echo = FALSE}
 # include this code block in the beginning to specify a style
