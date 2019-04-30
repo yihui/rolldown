@@ -23,7 +23,7 @@ output:
 
 ```{r echo = FALSE}
 # include this code block in the beginning to specify a style
-rolldown::rolldown_style_default()
+rolldown:::rolldown_style_default()
 ```
 
 # Level-One
