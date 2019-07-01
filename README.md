@@ -9,7 +9,7 @@
   
 ```r
 # Install from GitHub
-remotes::install_github("uncoast-unconf/rolldown")
+remotes::install_github("yihui/rolldown")
 ```
 
 ## Get started
