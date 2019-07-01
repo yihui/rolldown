@@ -1,0 +1,114 @@
+---
+title: "Scrollama Document with the Basic Style"
+author: Yihui Xie
+date: "`r Sys.Date()`"
+output:
+  rolldown::scrollama:
+    base_format: knitr:::html_vignette
+    fig_retina: 1
+    fig_width: 5
+    fig_height: 4
+vignette: >
+  %\VignetteIndexEntry{Scrollama Document with the Basic Style}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{css, example, echo=FALSE}
+.level1 {
+  min-height: 400px;
+  border: 1px solid;
+  margin-bottom: 4em;
+  padding: 1em 2em 2em;
+}
+.is-active {
+  background-color: yellow;
+}
+body {
+  margin-bottom: 80vh;
+}
+```
+
+
+# Setting up
+
+A Scrollama document consists of "step elements". As you scroll down/up the document, a step element may enter or exit an offset threshold, which you can imagine as a horizontal line placed at a certain height of the viewport.
+
+For this document, the step elements are level-one sections. Every time a level-one section enters the offset threshold, a class `is-active` is added to it. When it exits the threshold, the class is removed. To better understand the offset threshold, you can turn on the `debug` option in `rolldown::scrollama_setup()` so you can see the horizontal line:
+
+```{r, setup, eval=FALSE, tidy=FALSE}
+```
+
+Note that `rolldown::scrollama_setup()` should be actually called _at the end_ of a document.
+
+Below is the CSS applied to this document. Basically we added borders to level-one sections, and background colors to "active" sections.
+
+```{css, example, eval=FALSE}
+```
+
+## Level-two heading
+
+Level-two and below headings...
+
+### Level-three
+
+...are all contained in the same section.
+
+
+# Text
+
+Example text.
+
+
+# Plots
+
+You may include any number of plots in a section.
+
+```{r}
+par(mar = c(4, 4, .5, .1))
+plot(pressure, type = 'h', las = 1)
+```
+
+# For experts
+
+As mentioned in the beginning, you should call `rolldown::scrollama_setup()` at the end of a document. If you know JavaScript, you may have noticed that `scrollama_setup()` is a simple helper function to write out JavaScript like this:
+
+```js
+(function() {
+  var scroller = scrollama();
+  scroller.setup({"step": ".level1", "offset": 0.2})
+    .onStepEnter(res => {
+      res.element.classList.add("is-active");
+    })
+    .onStepExit(res => {
+      res.element.classList.remove("is-active");
+    });
+  window.addEventListener("resize", scroller.resize);
+})();
+```
+
+You certainly do not have to rely on this R helper function, and can write JavaScript directly in an R Markdown document. For example, if you want to use the class name `current` instead of `is-active`, you may set up Scrollama with a `js` code chunk:
+
+````md
+`r ''````{js, echo=FALSE}
+(function() {
+  var scroller = scrollama();
+  scroller.setup({"step": ".level1", "offset": 0.2})
+    .onStepEnter(res => {
+      res.element.classList.add("current");
+    })
+    .onStepExit(res => {
+      res.element.classList.remove("current");
+    });
+  window.addEventListener("resize", scroller.resize);
+})();
+```
+````
+
+For more information about Scrollama, please check out its documentation at https://github.com/russellgoldenberg/scrollama.
+
+```{r, setup, echo=FALSE}
+rolldown::scrollama_setup(
+  list(step = '.level1', offset = .2, debug = TRUE)
+)
+```
