@@ -13,6 +13,9 @@ output: rolldown::scrollama
 .is-active {
   background-color: yellow;
 }
+body {
+  margin-bottom: 80vh;
+}
 ```
 
 
