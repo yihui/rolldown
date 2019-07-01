@@ -1,0 +1,63 @@
+---
+title: "Scrollama Document"
+output: rolldown::scrollama
+---
+
+```{css, echo=FALSE}
+.level1 {
+  min-height: 400px;
+  border: 1px solid;
+  margin-bottom: 4em;
+  padding: 1em 2em 2em;
+}
+.is-active {
+  background-color: yellow;
+}
+```
+
+
+# Introduction
+
+
+
+## Level-two heading
+
+Level-two and below headings...
+
+### Level-three
+
+...are all contained in the same section.
+
+
+# Text
+
+Example text.
+
+
+# Plots
+
+You may include any number of plots in a section.
+
+```{r}
+par(mar = c(4, 4, .5, .1))
+plot(cars, pch = 19)
+plot(pressure, type = 'h')
+```
+
+
+# Images
+
+Local news [reported](https://www.desmoinesregister.com/story/news/2018/04/27/rubber-duck-des-moines-yess-duck-derby/558852002/) a giant inflatable rubber duck rolling down the street of Des Moines, where this package is conceived.
+
+![The Rolling Duck](https://user-images.githubusercontent.com/163582/60457872-c164ff00-9c02-11e9-8d0f-cdae566b75ed.jpeg)
+
+
+# Setup
+
+You should call `rolldown::scrollama_setup()` at the end of a document. Turn off the `debug` option to get rid of the horizontal line on the page, and you probably also want `echo=FALSE` on this code chunk:
+
+```{r}
+rolldown::scrollama_setup(
+  list(step = '.level1', offset = .2, debug = TRUE)
+)
+```
