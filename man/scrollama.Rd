@@ -13,7 +13,7 @@ scrollama_sidebar(..., template = pkg_resource("html", "scrollama-side.html"))
 scrollama_setup(options = list(step = ".section, img, video, embed", offset = 0.5))
 }
 \arguments{
-\item{...}{Arguments to be passed to
+\item{..., template}{Arguments to be passed to
 \code{bookdown::\link{html_document2}()}.}
 
 \item{options}{A list of initialization options for Scrollama.}

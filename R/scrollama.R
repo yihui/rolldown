@@ -1,7 +1,7 @@
 #' R Markdown output formats for using Scrollama
 #'
 #' Include the Scrollama JS library in the HTML output from R Markdown.
-#' @param ... Arguments to be passed to
+#' @param ...,template Arguments to be passed to
 #'   \code{bookdown::\link{html_document2}()}.
 #' @importFrom htmltools htmlDependency tags HTML
 #' @export
