@@ -1,0 +1,17 @@
+Ah, the famous `diamonds` dataset from **ggplot2**. With the **plotly** package, we can make this graph of interactive
+
+```r
+library(plotly)
+library(rolldown)
+
+p1 <- ggplot(diamonds) +
+  geom_freqpoly(
+    aes(
+      x = log(price), 
+      color = clarity
+    )
+    stat = "density"
+  ) +
+  facet_wrap(~cut)
+ggplotly(p1)
+```
