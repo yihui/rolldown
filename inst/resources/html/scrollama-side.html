@@ -103,6 +103,8 @@ $endif$
       var el = res.element;
       el.classList.add("is-active");
       var ex = el;
+      // if the current step element is a section, look for the first figure /
+      // table / whatever and display it in the main area
       if (el.classList.contains("section")) {
         ex = el.querySelector(selector);
         if (!ex) {
@@ -110,11 +112,13 @@ $endif$
           return;
         }
       }
+      // show the full <div class="figure"> for an image wrapped in such a div
       if (ex.nodeName === "img" && ex.parentNode.classList.contains("figure")) {
         ex = ex.parentNode;
       }
       container.innerHTML = "";
       container.append(ex.cloneNode(true));
+      // remove the hard-coded widths on elements to be displayed in main area
       var els = container.querySelectorAll("*[width]");
       for (var i = 0; i < els.length; i++) {
         els[i].removeAttribute('width');
