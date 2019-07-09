@@ -1,0 +1,64 @@
+---
+title: "Scrollama Document with the Sidebar Layout"
+author: Yihui Xie
+date: "`r Sys.Date()`"
+output:
+  rolldown::scrollama_sidebar:
+    theme: null
+    fig_retina: 1
+vignette: >
+  %\VignetteIndexEntry{Scrollama Document with the Sidebar Layout}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{css, echo=FALSE}
+.level1 {
+  min-height: 400px;
+  border: 1px solid;
+  margin-bottom: 4em;
+  padding: 1em 2em 2em;
+  opacity: .5;
+}
+.is-active {
+  opacity: 1;
+  background-color: lightyellow;
+}
+body {
+  margin-bottom: 80vh;
+}
+table {
+  border-collapse: collapse;
+}
+```
+
+
+# Get started
+
+You can create a new Scrollama document with the sidebar layout from the RStudio IDE: `File -> New File -> R Markdown -> From Template`, and use the template "Scrollama Document (Sidebar Layout)".
+
+# The layout
+
+The main body of the document is displayed in the sidebar on the left. Figures, tables, and videos will be displayed in their full sizes in the main area on the right.
+
+For example, here is a simple table:
+
+```{r, echo=FALSE}
+knitr::kable(head(mtcars), caption = 'A boring table.')
+```
+
+As you scroll over the document, the first-level section that comes to the view will be highlighted, and the figure or table or video in the view in that section will be displayed on the right (if exists).
+
+# Plots
+
+You may include any number of plots in a section.
+
+```{r, fig.cap=c('A boring scatterplot.', 'A series of curves.'), fig.dim=c(8, 4)}
+par(mar = c(4, 4, .5, .1))
+plot(cars, pch = 19)
+for (z in 4:1) curve(z/x, 0, 10, add = z < 4, col = z)
+```
+
+# Conclusion
+
+That's it.
