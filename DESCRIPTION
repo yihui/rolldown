@@ -5,10 +5,11 @@ Version: 0.0.4
 Authors@R: c(
   person("Yihui", "Xie", email = "xie@yihui.name", role = c("aut", "cre")),
   person("Siqi", "Zhang", email = "iqis.gnahz@gmail.com", role = c("ctb")),
+  person("Russell", "Goldenberg", role = "ctb", comment = "The JS library inst/resources/scrollama/scrollama.min.js"),
   person()
   )
 Description: R Markdown output formats based on JavaScript libraries such as
-    Scrollama for storytelling.
+    'Scrollama' (<https://github.com/russellgoldenberg/scrollama>) for storytelling.
 Imports: htmltools, bookdown, jsonlite
 License: MIT + file LICENSE
 Encoding: UTF-8
