@@ -14,10 +14,13 @@
         box-sizing: border-box;
         max-width: 100%;
       }
+      .header {
+        text-align: center;
+      }
       .main {
         display: flex;
       }
-      .main table {
+      .sidebar table {
         display: block;
         max-height: 200px;
         overflow: hidden;
@@ -32,12 +35,23 @@
         top: 10vh;
         height: 80vh;
         margin-left: 2em;
+        padding: 2em;
         display: flex;
         justify-content: center;
         align-items: center;
       }
       .exhibit * {
         max-height: 100%;
+      }
+      .exhibit > table, .exhibit > iframe {
+        width: 100%;
+      }
+      .exhibit tr {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+      .exhibit th, .exhibit td {
+        padding: 5px;
       }
     </style>
     $for(header-includes)$
@@ -95,17 +109,19 @@ $endif$
 <script>
 (function() {
   var scroller = scrollama(),
-      selector = "div.figure, p > img, table, video, embed, iframe",
+      selector = ['div.figure', 'p > img', 'table', 'video', 'embed', 'iframe'],
       container = document.querySelector(".exhibit");
+  // all step elements should be under <div class="sidebar">
+  selector = selector.map(function(x) { return '.sidebar ' + x; }).join(', ');
 
-  scroller.setup({"step": ".section, " + selector})
+  scroller.setup({"step": '.level1, ' + selector})
     .onStepEnter(res => {
       var el = res.element;
-      el.classList.add("is-active");
       var ex = el;
       // if the current step element is a section, look for the first figure /
       // table / whatever and display it in the main area
       if (el.classList.contains("section")) {
+        el.classList.add("is-active");
         ex = el.querySelector(selector);
         if (!ex) {
           container.innerHTML = "";
