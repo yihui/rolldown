@@ -18,9 +18,18 @@ scrollama_setup(options = list(step = ".section, img, video, embed", offset = 0.
 
 \item{options}{A list of initialization options for Scrollama.}
 }
+\value{
+\code{scrollama()} and \code{scrollama_sidebar()} return R Markdown
+  output formats; \code{scrollama_setup()} is a helper function to return the
+  JavaScript code for initializing Scrollama.
+}
 \description{
 Include the Scrollama JS library in the HTML output from R Markdown.
 }
 \examples{
 rolldown::scrollama_setup(list(step = ".level1", offset = 0.2))
+}
+\references{
+The Scrollama library:
+  \url{https://github.com/russellgoldenberg/scrollama}.
 }
