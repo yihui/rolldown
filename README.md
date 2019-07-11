@@ -17,5 +17,9 @@ remotes::install_github("yihui/rolldown")
 You can get started with some built-in R Markdown templates in this package. If you use the RStudio IDE, you can create a new R Markdown document from `File -> New File -> R Markdown -> From Template`. Then find a **rolldown** template from the list. If you do not use RStudio, you may use the `rmarkdown::draft()` function to create a new R Markdown document, e.g.,
 
 ```r
+# the basic style
 rmarkdown::draft('story.Rmd', template = 'scrollama-document', package = 'rolldown')
+
+# the sidebar layout
+rmarkdown::draft('story.Rmd', template = 'scrollama-sidebar', package = 'rolldown')
 ```
