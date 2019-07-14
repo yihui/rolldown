@@ -19,3 +19,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/yihui/rolldown
+BugReports: https://github.com/yihui/rolldown/issues
