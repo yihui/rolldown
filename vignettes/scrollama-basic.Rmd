@@ -105,7 +105,7 @@ You certainly do not have to rely on this R helper function, and can write JavaS
 ```
 ````
 
-For more information about Scrollama, please check out its documentation at https://github.com/russellgoldenberg/scrollama.
+For more information about Scrollama, please check out its documentation at https://github.com/russellsamora/scrollama.
 
 ```{r, setup, echo=FALSE}
 rolldown::scrollama_setup(

@@ -13,7 +13,7 @@ Experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 **Rolldown** is an [R Markdown](https://rmarkdown.rstudio.com) extension that
 builds scroll-driven HTML documents for storytelling, a.k.a *scrollytelling*,
 powered by JavaScript libraries. Currently, only
-[Scrollama](https://github.com/russellgoldenberg/scrollama) is supported.
+[Scrollama](https://github.com/russellsamora/scrollama) is supported.
 
 ## Installation
 

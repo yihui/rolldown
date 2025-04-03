@@ -32,5 +32,5 @@ rolldown::scrollama_setup(list(step = ".level1", offset = 0.2))
 }
 \references{
 The Scrollama library:
-\url{https://github.com/russellgoldenberg/scrollama}.
+\url{https://github.com/russellsamora/scrollama}.
 }

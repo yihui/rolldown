@@ -3,7 +3,7 @@
 #' Include the Scrollama JS library in the HTML output from R Markdown.
 #' @param ...,template Arguments to be passed to [bookdown::html_document2()].
 #' @references The Scrollama library:
-#'   <https://github.com/russellgoldenberg/scrollama>.
+#'   <https://github.com/russellsamora/scrollama>.
 #' @return `scrollama()` and `scrollama_sidebar()` return R Markdown output
 #'   formats; `scrollama_setup()` is a helper function to return the JavaScript
 #'   code for initializing Scrollama.
