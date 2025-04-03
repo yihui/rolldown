@@ -1,7 +1,9 @@
 # rolldown
 
-[![Travis build status](https://travis-ci.com/yihui/rolldown.svg?branch=master)](https://travis-ci.com/yihui/rolldown)
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/yihui/rolldown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yihui/rolldown/actions/workflows/R-CMD-check.yaml)
 ![Lifecycle: Experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
+<!-- badges: end -->
 
 **Rolldown** is an [R Markdown](https://rmarkdown.rstudio.com) extension that builds scroll-driven HTML documents for storytelling, a.k.a _scrollytelling_, powered by JavaScript libraries. Currently, only [Scrollama](https://github.com/russellgoldenberg/scrollama) is supported. 
 

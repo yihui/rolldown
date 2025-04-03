@@ -1,7 +1,7 @@
 Package: rolldown
 Type: Package
 Title: R Markdown Output Formats for Storytelling
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
   person("Yihui", "Xie", email = "xie@yihui.name", role = c("aut", "cre")),
   person("Siqi", "Zhang", email = "iqis.gnahz@gmail.com", role = c("ctb")),
@@ -13,7 +13,6 @@ Description: R Markdown output formats based on JavaScript libraries such as
 Imports: htmltools, bookdown, jsonlite
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
     knitr,
