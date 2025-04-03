@@ -1,7 +1,7 @@
 Package: rolldown
 Type: Package
 Title: R Markdown Output Formats for Storytelling
-Version: 0.1.2
+Version: 0.2
 Authors@R: c(
   person("Yihui", "Xie", email = "xie@yihui.name", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-0645-5666", URL = "https://yihui.org")),
   person("Siqi", "Zhang", email = "iqis.gnahz@gmail.com", role = c("ctb")),
