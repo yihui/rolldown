@@ -10,18 +10,19 @@ scrollama(...)
 
 scrollama_sidebar(..., template = pkg_resource("html", "scrollama-side.html"))
 
-scrollama_setup(options = list(step = ".section, img, video, embed", offset = 0.5))
+scrollama_setup(
+  options = list(step = ".section, img, video, embed", offset = 0.5)
+)
 }
 \arguments{
-\item{..., template}{Arguments to be passed to
-\code{bookdown::\link{html_document2}()}.}
+\item{..., template}{Arguments to be passed to \code{\link[bookdown:html_document2]{bookdown::html_document2()}}.}
 
 \item{options}{A list of initialization options for Scrollama.}
 }
 \value{
-\code{scrollama()} and \code{scrollama_sidebar()} return R Markdown
-  output formats; \code{scrollama_setup()} is a helper function to return the
-  JavaScript code for initializing Scrollama.
+\code{scrollama()} and \code{scrollama_sidebar()} return R Markdown output
+formats; \code{scrollama_setup()} is a helper function to return the JavaScript
+code for initializing Scrollama.
 }
 \description{
 Include the Scrollama JS library in the HTML output from R Markdown.
@@ -31,5 +32,5 @@ rolldown::scrollama_setup(list(step = ".level1", offset = 0.2))
 }
 \references{
 The Scrollama library:
-  \url{https://github.com/russellgoldenberg/scrollama}.
+\url{https://github.com/russellgoldenberg/scrollama}.
 }
