@@ -20,6 +20,7 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      - uses: r-lib/actions/setup-pandoc@HEAD
       - uses: r-lib/actions/setup-r@HEAD
         with:
           use-public-rspm: true
