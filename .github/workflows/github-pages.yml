@@ -2,25 +2,19 @@ name: Build and deploy package site
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: r-lib/actions/setup-pandoc@HEAD
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
       - uses: r-lib/actions/setup-r@HEAD
         with:
           use-public-rspm: true
@@ -31,8 +25,7 @@ jobs:
       - uses: yihui/actions/litedown-site@HEAD
         with:
           site-dir: 'site'
-      - uses: actions/upload-pages-artifact@v3
+      - uses: peaceiris/actions-gh-pages@HEAD
         with:
-          path: 'site'
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
