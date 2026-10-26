@@ -7,6 +7,7 @@
 badge](https://yihui.r-universe.dev/rolldown/badges/version)](https://yihui.r-universe.dev/rolldown)
 ![Lifecycle:
 Experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
+[![Build site](https://github.com/yihui/rolldown/actions/workflows/litedown-site.yml/badge.svg)](https://github.com/yihui/rolldown/actions/workflows/litedown-site.yml)
 
 <!-- badges: end -->
 
